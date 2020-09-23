@@ -7,11 +7,11 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane fx:id="anchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="300.0" prefWidth="500.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="inventorySystem.controller.menuController">
+<AnchorPane fx:id="anchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="350.0" prefWidth="500.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1">
    <children>
-      <Label layoutX="154.0" layoutY="14.0" text="Welcome!!!">
+      <Label layoutX="220.0" layoutY="14.0" text="Sign In">
          <font>
-            <Font name="Apple Garamond" size="48.0" />
+            <Font name="Apple Garamond" size="24.0" />
          </font>
       </Label>
       <Label layoutX="113.0" layoutY="78.0" text="Username">
@@ -26,7 +26,7 @@
             <Font name="Apple Garamond" size="16.0" />
          </font>
       </Label>
-      <Button layoutX="166.0" layoutY="254.0" mnemonicParsing="false" onAction="#quitBtnAction" text="Quit">
+      <Button layoutX="229.0" layoutY="309.0" mnemonicParsing="false" onAction="#quitBtnAction" text="Quit">
          <font>
             <Font name="Apple Garamond" size="14.0" />
          </font>
@@ -41,5 +41,10 @@
             <Font name="Apple Garamond" size="16.0" />
          </font>
       </Label>
+      <Button layoutX="160.0" layoutY="254.0" mnemonicParsing="false" onAction="#signUpBtnAction" text="Sign Up">
+         <font>
+            <Font name="Apple Garamond" size="14.0" />
+         </font>
+      </Button>
    </children>
 </AnchorPane>
