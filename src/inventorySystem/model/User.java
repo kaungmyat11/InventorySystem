@@ -44,10 +44,11 @@ public class User {
         return password;
     }
 
-    public void login(String username, String password) {
+    public boolean login(String username, String password) {
         dbConnect databaseConnection = new dbConnect();
         String query = "SELECT * FROM users WHERE username = '" + username + "' AND pwd = SHA1('" + password + "');";
-        databaseConnection.viewUser(query);
+        boolean iscCompleted = databaseConnection.viewUser(query);
+        return iscCompleted;
     }
 
 
@@ -55,5 +56,11 @@ public class User {
         dbConnect databaseConnection = new dbConnect();
         String query = "INSERT INTO users values('" + this.username + "',SHA1('" + this.password + "'));";
         databaseConnection.executeQuery(query);
+    }
+
+    public void viewItems() {
+        dbConnect connection = new dbConnect();
+        String query = "SELECT * FROM items";
+        connection.showItems(query);
     }
 }

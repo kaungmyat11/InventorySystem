@@ -31,7 +31,7 @@ public class dbConnect {
         }
     }
 
-    public void viewUser(String query) {
+    public boolean viewUser(String query) {
         try {
             ResultSet resultSet;
             resultSet = statement.executeQuery(query);
@@ -40,12 +40,16 @@ public class dbConnect {
                 String password = resultSet.getString(2);
                 System.out.println("Username : " + username + "\t Password: " + password);
                 System.out.println("You have successfully logged in");
+                connection.close();
+                return true;
             } else {
                 System.out.println("Please check your username and password !!!!!");
+                connection.close();
+                return false;
             }
-            connection.close();
         } catch (SQLException e) {
             System.out.println("Error in SQL Statement: " + e);
+            return false;
         }
     }
 
